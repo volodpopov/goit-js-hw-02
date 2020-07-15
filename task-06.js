@@ -4,17 +4,24 @@ let input;
 const numbers = [];
 let total = 0;
 
-while (true) {
-  input = prompt('Введите число для сложения:', 0);
-
-  if (input === '' || input === null || Number.isNaN(Number(input))) break;
+do {
+  input = prompt('Введите число для сложения:', '');
+  if (input === null) {
+    break;
+  }
+  if (Number.isNaN(Number(input)) || input === '') {
+    alert(`Было введено не число, попробуйте еще раз`);
+    continue;
+  }
   numbers.push(+input);
-  console.log(numbers);
-}
-if (numbers.length > 0) {
-  for (let number of numbers) {
-    total += number;
+} while (input !== null);
+{
+  if (numbers.length == 0) {
+    console.log(`Ваш массив пуст!`);
+  } else {
+    for (let number of numbers) {
+      total += number;
+    }
+    alert(`Общая сумма чисел равна ${total}`);
   }
 }
-
-console.log(`Общая сумма чисел равна ${total}`);
