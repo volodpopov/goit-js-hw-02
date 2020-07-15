@@ -22,6 +22,6 @@ do {
     for (let number of numbers) {
       total += number;
     }
-    alert(`Общая сумма чисел равна ${total}`);
+    console.log(`Общая сумма чисел равна ${total}`);
   }
 }
