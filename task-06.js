@@ -16,7 +16,7 @@ do {
   numbers.push(+input);
 } while (input !== null);
 {
-  if (numbers.length == 0) {
+  if (numbers.length === 0) {
     console.log(`Ваш массив пуст!`);
   } else {
     for (let number of numbers) {
