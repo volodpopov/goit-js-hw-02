@@ -1,15 +1,9 @@
 'use strict';
 
 const formatString = function (string) {
-  const stringToSimbols = string.split('');
-  if (stringToSimbols.length <= 40) {
-    return string;
-  } else {
-    const cropString = stringToSimbols.splice(0, 40);
-    cropString.push('...');
-    const newString = cropString.join('');
-    return newString;
-  }
+  return string.split('').length <= 40
+    ? string
+    : string.split('').splice(0, 40).join('');
 };
 
 console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
